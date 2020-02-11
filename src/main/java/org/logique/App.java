@@ -13,16 +13,19 @@ public class App
 
 
 
+    private static Map<String, Integer> setPlacar(){
+        Map<String,Integer> placar = new HashMap<String, Integer>();
+        placar.put("Vitoria",0);
+        placar.put("Derrota",0);
+        placar.put("Empate",0);
 
+        return placar;
+    }
     public static void main( String[] args )
     {
         Janken player1 = Janken.PAPEL;
         Janken player2 = Janken.setRandom();
-        Map<String,Integer> placar = new HashMap<String, Integer>();
-
-        placar.put("Vitoria",0);
-        placar.put("Derrota",0);
-        placar.put("Empate",0);
+        Map<String,Integer> placar = setPlacar();
 
         System.out.println(player1 + " , " + player2);
 
@@ -44,6 +47,8 @@ public class App
                     break;
             }
         }
-        System.out.println("Player 1: " + placar);
+        System.out.println("O Jogador 1, que sempre jogou PAPEL, ganhou "
+                + placar.get("Vitoria")+", perdeu " + placar.get("Derrota")+ " e empatou " + placar.get("Empate") + " rodadas.");
+
     }
 }

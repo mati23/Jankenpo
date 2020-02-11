@@ -9,10 +9,6 @@ public enum Janken {
         return values()[(int) (Math.random()*values().length)];
     }
 
-    public Janken getJanken(){
-        return this.janken;
-    }
-
     public String resolveMatch(Janken player2){
         String result = "";
         if(this == PEDRA){

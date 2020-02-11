@@ -10,9 +10,6 @@ import java.util.*;
  */
 public class App 
 {
-
-
-
     private static Map<String, Integer> setPlacar(){
         Map<String,Integer> placar = new HashMap<String, Integer>();
         placar.put("Vitoria",0);
@@ -21,6 +18,7 @@ public class App
 
         return placar;
     }
+
     public static void main( String[] args )
     {
         Janken player1 = Janken.PAPEL;

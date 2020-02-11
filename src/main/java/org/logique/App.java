@@ -27,9 +27,6 @@ public class App
         Janken player2 = Janken.setRandom();
         Map<String,Integer> placar = setPlacar();
 
-        System.out.println(player1 + " , " + player2);
-
-        System.out.println(player1.resolveMatch(player2));
         for(int i=0;i<100;i++ ){
             player2 = Janken.setRandom();
             switch (player1.resolveMatch(player2)){
